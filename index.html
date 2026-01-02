@@ -2,12 +2,55 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>My Website</title>
+  <title>トップページ</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #f5f5f5;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 80px auto;
+      text-align: center;
+    }
+
+    h1 {
+      margin-bottom: 40px;
+    }
+
+    .buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    a.button {
+      display: block;
+      padding: 16px;
+      background: #2563eb;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-size: 18px;
+    }
+
+    a.button:hover {
+      background: #1e40af;
+    }
+  </style>
 </head>
 <body>
+  <div class="container">
+    <h1>サイトトップ</h1>
 
-  <h1>ようこそ</h1>
-  <p>これはトップページです。</p>
-
+    <div class="buttons">
+      <a class="button" href="#">辞書</a>
+      <a class="button" href="#">ブログ</a>
+      <a class="button" href="#">このサイトについて</a>
+    </div>
+  </div>
 </body>
 </html>
