@@ -1,19 +1,19 @@
-/* ===== カラーテーマ ===== */
+/* ===== デフォルト（ライト） ===== */
 :root {
-  --bg: #f4f8ff;
-  --text: #1a1a1a;
-  --accent: #cfe0ff;
+  --bg: #f7faff;
+  --text: #1f2937;
+  --bar: #e8f0ff;
+  --card: #ffffff;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #0f172a;
-    --text: #e5e7eb;
-    --accent: #1e3a8a;
-  }
+/* ダーク */
+[data-theme="dark"] {
+  --bg: #0b1220;
+  --text: #e5e7eb;
+  --bar: #111c3a;
+  --card: #0f172a;
 }
 
-/* ===== 全体 ===== */
 body {
   margin: 0;
   background: var(--bg);
@@ -21,44 +21,45 @@ body {
   font-family: system-ui, sans-serif;
 }
 
-.container {
-  display: grid;
-  grid-template-columns: 240px 1fr;
-  height: 100vh;
+/* ===== 上部バー ===== */
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  background: var(--bar);
 }
 
-/* ===== サイドバー ===== */
-.sidebar {
-  background: var(--accent);
-  padding: 16px;
+.tabs {
   display: flex;
-  flex-direction: column;
   gap: 12px;
 }
 
-.sidebar button {
-  padding: 12px;
+.topbar button {
+  padding: 8px 14px;
   border: none;
-  border-radius: 8px;
-  background: white;
+  border-radius: 999px;
+  background: var(--card);
   cursor: pointer;
   font-size: 14px;
 }
 
-.sidebar button:hover {
-  opacity: 0.85;
-}
-
 /* ===== コンテンツ ===== */
 .content {
-  padding: 24px;
+  padding: 32px;
 }
 
-/* タブ切り替え */
 .tab {
   display: none;
 }
 
 .tab.active {
   display: block;
+}
+
+/* カード感 */
+.tab {
+  background: var(--card);
+  padding: 24px;
+  border-radius: 16px;
 }
