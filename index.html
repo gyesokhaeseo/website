@@ -1,56 +1,46 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <title>トップページ</title>
-  <style>
-    body {
-      font-family: sans-serif;
-      background: #f5f5f5;
-      margin: 0;
-      padding: 0;
-    }
-
-    .container {
-      max-width: 600px;
-      margin: 80px auto;
-      text-align: center;
-    }
-
-    h1 {
-      margin-bottom: 40px;
-    }
-
-    .buttons {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
-
-    a.button {
-      display: block;
-      padding: 16px;
-      background: #2563eb;
-      color: white;
-      text-decoration: none;
-      border-radius: 8px;
-      font-size: 18px;
-    }
-
-    a.button:hover {
-      background: #1e40af;
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <title>My Site</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="container">
-    <h1>サイトトップ</h1>
 
-    <div class="buttons">
-      <a class="button" href="#">辞書</a>
-      <a class="button" href="#">ブログ</a>
-      <a class="button" href="#">このサイトについて</a>
-    </div>
+    <!-- 左メニュー -->
+    <nav class="sidebar">
+      <button onclick="showTab('korean')">韓国語解説</button>
+      <button onclick="showTab('gadget')">ガジェット</button>
+      <button onclick="showTab('blog')">ブログ</button>
+      <button onclick="showTab('dictionary')">辞書</button>
+    </nav>
+
+    <!-- 右コンテンツ -->
+    <main class="content">
+      <section id="korean" class="tab active">
+        <h1>韓国語解説</h1>
+        <p>ここに韓国語の解説を書きます。</p>
+      </section>
+
+      <section id="gadget" class="tab">
+        <h1>ガジェット</h1>
+        <p>ガジェットレビューなど。</p>
+      </section>
+
+      <section id="blog" class="tab">
+        <h1>ブログ</h1>
+        <p>日記や記事。</p>
+      </section>
+
+      <section id="dictionary" class="tab">
+        <h1>辞書</h1>
+        <p>韓国語辞書コンテンツ。</p>
+      </section>
+    </main>
+
   </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
