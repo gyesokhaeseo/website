@@ -6,41 +6,49 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="container">
 
-    <!-- 左メニュー -->
-    <nav class="sidebar">
-      <button onclick="showTab('korean')">韓国語解説</button>
-      <button onclick="showTab('gadget')">ガジェット</button>
-      <button onclick="showTab('blog')">ブログ</button>
-      <button onclick="showTab('dictionary')">辞書</button>
-    </nav>
+<header class="topbar">
+  <button class="top-btn" onclick="showTab('home')">トップ</button>
 
-    <!-- 右コンテンツ -->
-    <main class="content">
-      <section id="korean" class="tab active">
-        <h1>韓国語解説</h1>
-        <p>ここに韓国語の解説を書きます。</p>
-      </section>
+  <nav class="tabs">
+    <button onclick="showTab('korean')">韓国語解説</button>
+    <button onclick="showTab('gadget')">ガジェット</button>
+    <button onclick="showTab('blog')">ブログ</button>
+    <button onclick="showTab('dictionary')">辞書</button>
+  </nav>
 
-      <section id="gadget" class="tab">
-        <h1>ガジェット</h1>
-        <p>ガジェットレビューなど。</p>
-      </section>
+  <button class="mode-btn" onclick="toggleTheme()">🌙 / ☀️</button>
+</header>
 
-      <section id="blog" class="tab">
-        <h1>ブログ</h1>
-        <p>日記や記事。</p>
-      </section>
+<main class="content">
 
-      <section id="dictionary" class="tab">
-        <h1>辞書</h1>
-        <p>韓国語辞書コンテンツ。</p>
-      </section>
-    </main>
+  <section id="home" class="tab active">
+    <h1>トップページ</h1>
+    <p>ここにサイト概要を書きます。</p>
+  </section>
 
-  </div>
+  <section id="korean" class="tab">
+    <h1>韓国語解説</h1>
+    <p>韓国語の文法・表現など。</p>
+  </section>
 
-  <script src="script.js"></script>
+  <section id="gadget" class="tab">
+    <h1>ガジェット</h1>
+    <p>レビューやメモ。</p>
+  </section>
+
+  <section id="blog" class="tab">
+    <h1>ブログ</h1>
+    <p>日記・考えたこと。</p>
+  </section>
+
+  <section id="dictionary" class="tab">
+    <h1>辞書</h1>
+    <p>韓国語辞書。</p>
+  </section>
+
+</main>
+
+<script src="script.js"></script>
 </body>
 </html>
